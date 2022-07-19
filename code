@@ -1,0 +1,21 @@
+import random
+lis=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+win=0
+total=0
+while(1):
+    total=total+1
+    a=random.randint(0,len(lis)-1)
+    print("What is the number of the given alphabet : ",lis[a])
+    b=int(input())
+    if(b-1==a):
+        print("Correct")
+        win=win+1
+    else:
+        print("Incorrect")
+        print("The Correct Answer is : ",a+1)
+    print("type 'y' to continue the game and 'n' to stop the game : \t")
+    t=input()
+    if(t=='n'):
+        print("Total number of questions : ",total)
+        print("No.of correct answers : ",win)
+        exit()
